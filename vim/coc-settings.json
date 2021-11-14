@@ -1,0 +1,26 @@
+{
+    "languageserver": {
+        "ccls": {
+            "command": "ccls",
+            "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+            "rootPatterns": [".ccls", "build/compile_commands.json", ".clang-format"],
+            "initializationOptions": {
+                "cache": {
+                    "directory": ".ccls-cache"
+                },
+                "highlight": {
+                    "lsRanges": true
+                },
+                "compilationDatabaseDirectory": "build"
+            }
+        },
+        "cmake": {
+            "command": "cmake-language-server",
+            "filetypes": ["cmake"],
+            "rootPatterns": ["build/"],
+            "initializationOptions": {
+                "buildDirectory": "build"
+            }
+        }
+    }
+}
