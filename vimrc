@@ -27,28 +27,22 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'morhetz/gruvbox'
 
-    Plug 'vimwiki/vimwiki'
-    
     Plug 'gilligan/vim-lldb'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'jackguo380/vim-lsp-cxx-highlight'
-    Plug 'rhysd/vim-clang-format'
     Plug 'tikhomirov/vim-glsl'
 
+    Plug 'vim-autoformat/vim-autoformat'
     Plug 'itchyny/lightline.vim'
-    Plug 'preservim/nerdtree'
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
     Plug 'sharkdp/bat'
-    
-    Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
 colorscheme gruvbox 
 
-runtime configs/vimwiki.vim
 runtime configs/coc.vim
-runtime configs/nerdtree.vim
 runtime configs/lightline.vim
-runtime configs/clang-format.vim
+
+nnoremap <C-T> :Files<CR>
