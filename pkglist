@@ -24,6 +24,8 @@ gtest
 cmake
 ccls
 astyle
+cuda
+cuda-tools
 rust
 dotnet-sdk
 aspnet-targeting-pack
