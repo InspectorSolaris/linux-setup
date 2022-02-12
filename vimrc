@@ -1,6 +1,7 @@
-set ttyfast
-set lazyredraw
 syntax on
+
+set nocompatible
+set ttyfast
 
 set encoding=utf-8
 
@@ -9,29 +10,30 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set smarttab
-set smartindent
 set expandtab
 set autoindent
-set number
-set cursorline
+set smartindent
 
 filetype indent on
 
-set showcmd
-set wildmenu
-
 set incsearch
 set hlsearch
+
+set scrolloff=16
+set lazyredraw
+set splitbelow
+set splitright
 
 call plug#begin('~/.vim/plugged')
 
     Plug 'morhetz/gruvbox'
 
-    Plug 'gilligan/vim-lldb'
+    Plug 'rust-lang/rust.vim'
+
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'jackguo380/vim-lsp-cxx-highlight'
     Plug 'tikhomirov/vim-glsl'
-
+    
     Plug 'vim-autoformat/vim-autoformat'
     Plug 'itchyny/lightline.vim'
     Plug 'junegunn/fzf'
@@ -40,9 +42,13 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
-colorscheme gruvbox 
+colorscheme gruvbox
 
 runtime configs/coc.vim
+runtime configs/cmake.vim
 runtime configs/lightline.vim
 
 nnoremap <C-T> :Files<CR>
+
+autocmd BufWrite *.cpp :Autoformat
+autocmd BufWrite *.hpp :Autoformat

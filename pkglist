@@ -8,11 +8,14 @@ tree
 bat
 fzf
 vim
+neovim
 code
-gcc
+llvm
 clang
-gdb
+libc++
 lldb
+gcc
+gdb
 ninja
 vulkan-devel
 glfw-x11
@@ -22,8 +25,8 @@ fmt
 spdlog
 gtest
 cmake
-ccls
 astyle
+uncrustify
 cuda
 cuda-tools
 rust
@@ -34,6 +37,7 @@ nodejs
 npm
 python
 go
+ruby
 docker
 nginx-mainline
 apache
