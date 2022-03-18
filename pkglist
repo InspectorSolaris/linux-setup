@@ -30,7 +30,7 @@ astyle
 uncrustify
 cuda
 cuda-tools
-rust
+rustup
 dotnet-sdk
 aspnet-targeting-pack
 aspnet-runtime

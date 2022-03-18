@@ -3,6 +3,7 @@ require('packer').startup(function(use)
     use { 'nvim-lua/plenary.nvim' }
     use { 'kyazdani42/nvim-web-devicons' }
 
+    use { 'rust-lang/rust.vim' }
     use { 'neovim/nvim-lspconfig' }
     use { 'neoclide/coc.nvim', branch = 'release' }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -10,8 +11,8 @@ require('packer').startup(function(use)
     use { 'mhartington/formatter.nvim' }
     
     use { 'ellisonleao/gruvbox.nvim' }
-    use { 'nvim-lualine/lualine.nvim' }
     use { 'xiyaowong/nvim-transparent' }
+    use { 'nvim-lualine/lualine.nvim' }
 
     use { 'goolord/alpha-nvim' }
 
@@ -49,3 +50,5 @@ augroup FormatAutogroup
   autocmd BufWritePost *.cpp,*.hpp FormatWrite
 augroup END
 ]], true)
+
+vim.api.nvim_set_var('rustfmt_autosave', 1)
